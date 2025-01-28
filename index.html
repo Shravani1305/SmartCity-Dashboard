@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCity Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kankavli SmartCity Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#maps">Maps</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="dashboard">
+        <h2>Real-time Data Visualization</h2>
+        <div class="data-container">
+            <div class="data-card">
+                <h3>Traffic Updates</h3>
+                <p id="traffic-data">Loading...</p>
+            </div>
+            <div class="data-card">
+                <h3>Weather Conditions</h3>
+                <p id="weather-data">Loading...</p>
+            </div>
+            <div class="data-card">
+                <h3>Air Quality</h3>
+                <p id="air-quality-data">Loading...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="maps">
+        <h2>Interactive Maps</h2>
+        <div id="map"></div>
+        <div class="map-filters">
+            <button onclick="filterMap('eco-friendly')">Eco-Friendly Zones</button>
+            <button onclick="filterMap('tourist-spots')">Tourist Spots</button>
+            <button onclick="resetMap()">Reset Map</button>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Event Management</h2>
+        <div class="event-container">
+            <div class="event-card">
+                <h3>City Festival</h3>
+                <p>Date: 2025-02-15</p>
+                <button onclick="rsvpEvent('City Festival')">RSVP</button>
+            </div>
+            <!-- More events can be added here -->
+        </div>
+    </section>
+
+    <section id="alerts">
+        <h2>Emergency Alerts</h2>
+        <div class="alert-container">
+            <p id="emergency-alert">No current alerts.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SmartCity Dashboard</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+</body>
+</html>
